@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>maytinhhtml</title>
 </head>
 <body>
-$END$
+<form>
+    <table>
+        <tr>
+            <th colspan="2" id="tinh1">
+                <input type="text" name="display">
+            </th>
+            <th colspan="2" id="tinh2">
+                <input type="text" name="display">
+            </th>
+        </tr>
+        <tr id="operator">
+            <td><input type="button" name="themvao" value="Addition(+)" onclick="myFunction()"></td>
+            <td><input type="button" name="themvao" value="subtraction(-)" onclick="myFunction()"></td>
+            <td><input type="button" name="themvao" value="Multiplication(x)" onclick="myFunction()"></td>
+            <td><input type="button" name="themvao" value="Division(/)" onclick="myFunction()"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function myFunction(){
+        let tt1 = document.getElementById('tinh1').value;
+        let tt2 = document.getElementById('tinh2').value;
+        let operator = document.getElementById('operator').value;
+        let result = 0
+        if (operator=="+") {
+            result = parseInt(tinh1) + parseInt(tinh2);
+        } else if (operator=="-"){
+            result = parseInt(tinh1) - parseInt(tinh2);
+        } else if (operator=="*"){
+            result = parseInt(tinh1) * parseInt(tinh2)
+        } else{
+            result = parseInt(tinh1) / parseInt(tinh2);
+        }
+        document.getElementById('result').value = result;
+        alert('result:' )
+    }
+
+
+</script>
 </body>
 </html>
