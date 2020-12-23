@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+    <style>
+      .a {
+          font-size: 12px;
+          padding: 0 62px;
+      }
+      .b{
+          font-size: 12px;
+      }
+      .c{
+          font-size: 12px;
+          padding: 0 5px;
+      }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th class="a">Amount</th>
+        <th class="b">From Currency</th>
+        <th class="c">To Currency</th>
+    </tr>
+</table>
+
+<input type="number" id="so">
+<select id="tien">
+    <option value="23000">Viet Nam</option>
+    <option value="1" selected>USD</option>
+</select>
+<select id="giay">
+    <option value="23000">Viet Nam</option>
+    <option value="1">USD</option>
+</select>
+<button id="te" onclick="tien()">submid</button>
+<script>
+    function tien(){
+        let loaitien1= document.getElementById('tien').value;
+        let loaitien2= document.getElementById('giay').value;
+        let money= document.getElementById('so').value;
+        let area= loaitien2*money/loaitien1;
+        document.getElementById('te').value= area;
+        alert('area: ' +area);
+    }
+
+</script>
+</body>
+</html>
